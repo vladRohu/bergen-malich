@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="icon" href="Imgs/ico.png" type="image/png" />
+    <script defer src="index.js"></script>
+    <script defer src="slider.js"></script>
+    <title>Трансформационный процесс</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="form">
+      <div class="form">
+        <div id="close_form"><img src="Imgs/xmark-solid.svg" /></div>
+        <h3>Оставь свои данные, а мы с тобой свяжемся</h3>
+        <div class="group-form">
+          <input
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            id="name"
+            required
+          />
+          <label for="name">Имя</label>
+        </div>
+        <div class="group-form">
+          <input
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            id="phone"
+            required
+          />
+          <label for="phone">Номер</label>
+        </div>
+        <div class="group-form">
+          <input
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            id="nick"
+            required
+          />
+          <label for="nick">Ник в телеграмме</label>
+        </div>
+        <div id="send_form_data" class="submit-btn">Отправить</div>
+      </div>
+    </div>
+    <div id="menu">
+      <ul>
+        <a href="#who_for">
+          <li>Кому подходит?</li>
+        </a>
+        <a href="#format">
+          <li>Формат</li>
+        </a>
+        <a href="#program">
+          <li>Программа</li>
+        </a>
+        <a href="#result">
+          <li>Итог</li>
+        </a>
+        <a href="#prices">
+          <li>Тарифы</li>
+        </a>
+        <a href="#whats">
+          <li>Что входит</li>
+        </a>
+      </ul>
+    </div>
+    <header class="header">
+      <a href="#intro">
+        <div class="logo">Берген-Малич</div>
+      </a>
+      <div class="menu" id="menu_button">
+        <img src="Imgs/bars-solid.svg" alt="bars-solid" />
+      </div>
+    </header>
+    <div id="intro">
+      <div class="left-intro"></div>
+      <div class="intro-bg"></div>
+      <div class="right-intro">
+        <div class="text">
+          <p class="p-ren">С Ренатой Берген и Викторией Малич</p>
+          <p class="transform">Трансформационный процесс</p>
+          <p class="p-main">
+            Программа для тех, кто хочет понять себя и свои желания, обрести
+            внутреннюю опору и определить собственный путь в жизни, свою миссию
+            и аутентичность.
+          </p>
+          <p class="p-main-botton">
+            Противопоказана тем, кто страдает психическими расстройствами.
+          </p>
+        </div>
+        <div class="button">
+          <button>Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+    <div class="suitable">
+      <div class="outer-container">
+        <div class="down">
+          <img src="Imgs/down.png" alt="img-down" />
+        </div>
+        <div class="second-down">
+          <img src="Imgs/down.png" alt="img-down" />
+        </div>
+      </div>
+      <div class="con-suit" id="who_for">
+        <p class="p-title">Кому подходит?</p>
+        <p class="under-title">ЕСЛИ ТЫ</p>
+      </div>
+      <div class="cont-suit-bild">
+        <div class="top-suit">
+          <div class="left-top-suit">
+            <div>
+              <div class="ellipse">
+                <img src="Imgs/user-tie.svg" alt="user-tie" />
+              </div>
+              <p>Предприниматель</p>
+            </div>
+            <div>
+              Твое развитие остановилось, и ты не знаешь, как двигаться дальше.
+            </div>
+          </div>
+          <div class="right-top-suit">
+            <div>
+              <div class="ellipse">
+                <img src="Imgs/briefcase.svg" alt="briefcase" />
+              </div>
+              <p>Собственник бизнеса</p>
+            </div>
+            <div>
+              Твои результаты не приносят удовольствия, ты желаешь масштабного
+              развития.
+            </div>
+          </div>
+        </div>
+        <div class="bottom-siut">
+          <div class="left-bottom-suit">
+            <div>
+              <div class="ellipse">
+                <img src="Imgs/megaphone.svg" alt="megaphone" />
+              </div>
+              <p>Эксперт</p>
+            </div>
+            <div>У тебя большая экспертность, но отсутствуют продажи.</div>
+          </div>
+          <div class="right-bottom-suit">
+            <div>
+              <div class="ellipse">
+                <img src="Imgs/house-laptop.svg" alt="house-laptop" />
+              </div>
+              <p>Фрилансер</p>
+            </div>
+            <div>
+              Не знаешь в какой сфере хочешь реализоваться, то чем занимаешься
+              сейчас не удовлетворяет.
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="format" id="format">
+      <p class="p-title">Формат</p>
+      <p class="parag">Офлайн трансформационный процесс</p>
+      <div class="cont-format">
+        <div class="form1">
+          <div class="form-img">
+            <div class="background1"></div>
+            <span>3</span>
+          </div>
+          <p class="p-purp">
+            дня глубинных разборов бессознательных ограничивающих программ,
+            паттернов поведения, мышления и реагирования на реальность.
+          </p>
+        </div>
+        <div class="form2">
+          <div class="form-img">
+            <div class="background2"></div>
+            <span>3</span>
+          </div>
+          <p class="p-blue">
+            мастер-класса по работе с аутентичностью и миссией.
+          </p>
+        </div>
+        <div class="form3">
+          <div class="form-img">
+            <div class="background2"></div>
+            <span>1</span>
+          </div>
+          <p class="p-blue">
+            личная сессия по работе с бессознательным с Ренатой Берген (день
+            проведения для каждого участника определяется лично).
+          </p>
+        </div>
+        <div class="form4">
+          <div class="form-img">
+            <div class="background1"></div>
+            <span>4</span>
+          </div>
+          <p class="p-purp">спринта с домашними заданиями.</p>
+        </div>
+      </div>
+      <div class="form5">
+        <div class="form-img">
+          <div class="background2"></div>
+          <span>4</span>
+        </div>
+        <p class="p-blue">
+          эфира с разборами и обратной связью в общем чате после
+          трансформационного процесса.
+        </p>
+      </div>
+      <div class="reality">
+        <p class="parag">Реалити-шоу</p>
+        <div class="con-reality">
+          <div class="reality-img"></div>
+          <p>
+            Возьмем <span>1</span> из учеников и на глазах у всех остальных
+            прокачаем его блог и личность до <span>5000</span> подписчиков,
+            показав весь путь в <span>5</span> влогах.
+          </p>
+        </div>
+        <div class="button-reality">
+          <button>Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-back" id="program">
+      <div class="program">
+        <p class="title-program">Программа трансформационного процесса</p>
+      </div>
+      <div class="slider">
+        <div class="program-con">
+          <div class="con1-left-side">
+            <p class="day1">ДЕНЬ 1</p>
+            <p class="p-day1">
+              Глубинные разборы личности, бессознательных программ и
+              аутентичности каждого участника.
+            </p>
+            <p class="p-day1">
+              Определение аутентичности, позиционирование в бизнесе согласно
+              миссии и аутентичности.
+            </p>
+            <p class="p-day1">
+              Коммуникация и отстаивание личных границ, самоотношения.
+            </p>
+            <p class="p-total">Итог</p>
+            <div class="total">
+              <p>
+                Тебе понятно как сформирована твоя личность, какими
+                сильными скилами обладаешь, и как на них выстроить внутреннюю
+                опору. Определишь корневые ограничивающие программы.
+              </p>
+            </div>
+          </div>
+          <div class="con1-right-side"></div>
+        </div>
+
+        <div class="program-con">
+          <div class="con1-left-side">
+            <p class="day1">ДЕНЬ 2</p>
+            <p class="p-day1">
+              Глубинные разборы личности, бессознательных программ и
+              аутентичности каждого.
+            </p>
+            <p class="p-day1">Код аутентичности (каждого участника).</p>
+            <p class="p-day1">
+              Страх публичности и проявленности, хейт и работа с ним.
+            </p>
+            <p class="p-day1">
+              Определение миссии, позиционирование в бизнесе согласно миссии и
+              аутентичности. 
+            </p>
+            <p class="p-day1">
+              Ставим цели и начинаем прописывать стратегическую карту движения к
+              цели.
+            </p>
+            <p class="p-total2">Итог</p>
+            <div class="total">
+              <p>
+                Ты опередил свою миссию и аутентичность, простроил стратегию на
+                ближайшие пол года.
+              </p>
+            </div>
+          </div>
+          <div class="con2-right-side"></div>
+        </div>
+
+        <div class="program-con">
+          <div class="con1-left-side">
+            <p class="day1">ДЕНЬ 3</p>
+            <p class="p-day1">
+              Глубинные разборы личности, бессознательных программ и
+              аутентичности каждого.
+            </p>
+            <p class="p-day1">
+              Подсознательные страхи потери денег в рекламе/коллаборациях.
+            </p>
+            <p class="p-day1">Проявленность и способы продвижения.</p>
+            <p class="p-total">Итог</p>
+            <div class="total">
+              <p>
+                Каждый выходит из процесса с глубинным изменением личности,
+                результаты будут распаковываться до 1 месяца, с пониманием своей
+                истинной природы, потенциалов и аутентичности, с энергией
+                изменить свою жизнь и ясностью как это сделать.
+              </p>
+            </div>
+          </div>
+          <div class="con3-right-side"></div>
+        </div>
+      </div>
+      <div class="slider-dots"></div>
+      <button class="button-reality">Оставить заявку</button>
+    </div>
+
+    <div class="results" id="result">
+      <p class="title-bottom">По итогу обучения</p>
+      <div class="back-result">
+        <div class="result1">
+          <div></div>
+          <img src="Imgs/bullseye-pointer.svg" alt="icon" />
+          <p>Опередил свою аутентичность и миссию</p>
+        </div>
+        <div class="result2">
+          <div></div>
+          <img src="Imgs/binary-circle-check.svg" alt="icon" />
+          <p>Перепрограммировал корневые ограничивающие программы</p>
+        </div>
+        <div class="result1">
+          <div></div>
+          <img src="Imgs/chess-board.svg" alt="icon" />
+          <p>
+            Создал стратегию по личностному росту и росту в бизнесе <br />
+            на первые 6 месяцев
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price" id="prices">
+      <p class="title-bottom">Тарифы и цены</p>
+      <div class="con-img">
+        <div class="img1-price">
+          <p>Рената Берген</p>
+        </div>
+        <div class="img2-price">
+          <p>Виктория Малич</p>
+        </div>
+      </div>
+
+      <div class="con-price">
+        <div class="con-bottom-price">
+          <div class="img-tarif"></div>
+          <div class="tetx-tarif">
+            <p class="tarif">ТАРИФ ЕДИНЫЙ <span>€1250</span></p>
+            <p>Максимальное количество участников - 7 человек</p>
+          </div>
+        </div>
+      </div>
+      <!-- <p class="price-bottom">
+        <span>Процесс Берген-Малич</span> – программа, предполагающая полное
+        погружение и интенсивную работу в течение 3 дней с глубинными разборами,
+        погружение в темы аутентичность, проявленность, популярность, трафик,
+        хейт и трансформационную сессию с Ренатой .
+      </p> -->
+      <div class="res">
+        <p>Результаты</p>
+        <ul>
+          <li>
+            Происходит <span>ментальная</span> и
+            <span>эмоциональная</span> сепарация от родителей
+          </li>
+          <li>
+            Ментальность занимает свое место в <span>родовой системе</span>
+          </li>
+          <li><span>Исчезает</span> суета и тревожность</li>
+          <li>Повышается <span>концентрация</span></li>
+          <li>
+            Исчезает сопротивление совершать <span>целевые действия</span>
+          </li>
+          <li>
+            Повышается <span>самооценка</span> и <span>личные границы</span>
+          </li>
+          <li>
+            Контакт со своими <span>чувствами</span> и <span>эмоциями</span>
+          </li>
+          <li>Ясность мышления, исчезает <span>«туман»</span> в голове</li>
+          <li>
+            Появляется ясность своих истинных
+            <span>бессознательных желаний</span>
+          </li>
+          <li>
+            Находят свою истинную аутентичность, и на основе нее выстраивается
+            стратегия реализации на <span>ближайшие 10 лет</span>
+          </li>
+        </ul>
+        <button class="button-reality">Оставить заявку</button>
+      </div>
+      <div class="else">
+        <p class="title-bottom" id="whats">Что еще входит?</p>
+        <div class="con-img-else">
+          <div class="img-else1">
+            <img src="Imgs/2.webp" alt="icon" />
+            <p>Чат участников</p>
+          </div>
+          <div class="img-else2">
+            <img src="Imgs/1.webp" alt="icon" />
+            <p>Канал отчетов</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-else">
+        <div class="con-else">
+          <div class="left-con-else1">
+            <img src="Imgs/4.webp" alt="icon" />
+          </div>
+          <div class="right-con-else">
+            <p class="num">1</p>
+            <p class="text-else">
+              сессия перепрограммирования бессознательных ограничивающих
+              программ для каждого участника.
+            </p>
+          </div>
+        </div>
+        <div class="con-else">
+          <div class="left-con-else2">
+            <img src="Imgs/3.webp" alt="icon" />
+          </div>
+          <div class="right-con-else">
+            <p class="num">1</p>
+            <p class="text-else">
+              эфир после завершения трансформационного процесса.
+            </p>
+          </div>
+        </div>
+        <div class="con-else">
+          <div class="left-con-else3">
+            <img src="Imgs/1609412_P2PEB21.webp" alt="icon" />
+          </div>
+          <div class="right-con-else">
+            <p class="num">3</p>
+            <p class="text-else">дня личной офлайн работы в Варшаве.</p>
+          </div>
+        </div>
+      </div>
+      <button class="button-reality">Оставить заявку</button>
+      <hr />
+    </div>
+    <div class="bottom">
+      <div class="img-bottom">
+        <img src="Imgs/circle-exclamation.svg" alt="icon" />
+      </div>
+      <p>
+        Если в первый день ты понимаешь, что это не твое, - мы вернем деньги.
+      </p>
+    </div>
+    <div class="arrow-up" id="to_top">
+      <a href="#intro">
+        <div class="ellipse-arrow">
+          <img src="Imgs/arrow-up.svg" alt="arrow-up" />
+        </div>
+      </a>
+    </div>
+    <footer>Берген-Малич</footer>
+  </body>
+</html>
